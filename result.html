@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Result Page</title>
+  <link rel="stylesheet" type="text/css" href="advanced.css">
+
+
+  <script>
+    var count = 0;
+
+    window.addEventListener("DOMContentLoaded", function() {
+      var answer = document.getElementById("answer");
+      console.log();
+
+
+      var question1 = location.search;
+      question1 = question1.split("?")[1];
+      question1 = question1.split("&")[0];
+      question1 = question1.split("=")[1];
+      console.log(question1);
+
+      if (question1 == "atincan") {
+        count++;
+      }
+
+      var question2 = location.search;
+      question2 = question2.split("?")[1];
+      question2 = question2.split("&")[1];
+      question2 = question2.split("=")[1];
+      console.log(question2);
+
+      if (question2 == "elephant") {
+        count++;
+      }
+
+      var question3 = location.search;
+      question3 = question3.split("?")[1];
+      question3 = question3.split("&")[2];
+      question3 = question3.split("=")[1];
+      console.log(question3);
+
+      if (question3 == "n") {
+        count++;
+      }
+
+      answer.innerHTML = count + "/3";
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="content">
+    <img src="Logo.png" style="width:100%; display: block; margin:auto" alt="Logo Image">
+
+    <div class="nav">
+      <table>
+        <tr>
+          <td id="nav"><a href="introduction.html">Introduction</a></td>
+          <td id="nav"><a href="instruction.html">Instructions</a></td>
+          <td id="nav"><a href="form.html">Preview</a></td>
+          <td id="nav"><a href="about.html">About</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <h1>THE IMPOSSIBLE QUIZ</h1>
+
+
+    <table>
+      <tr>
+        <td>
+          <h3>HERE IS YOUR RESULT: </h3>
+        </td>
+        <td>
+          <div id=answer></div>
+        </td>
+      </tr>
+    </table>
+
+    <h3>THE ANSWER: </h3>
+    <form action="result.html" method="post">
+      <h2>Can a match box?</h2>
+      <input name="question1" type="radio" value="yes" disabled>Yes</input>
+      <br>
+      <input name="question1" type="radio" value="no" disabled>No</input>
+      <br>
+      <input name="question1" type="radio" value="atincan" checked><span style="color:green; font-weight:bold">No, But a tin can.</span></input>
+      <br>
+      <input name="question1" type="radio" value="onebeatmiketyson" disabled> Yes, one beat Mike Tyson
+      </input>
+
+      <h2>The answer is really big</h2>
+      <input name="question2" type="radio" value="answer" disabled>
+      <font size="50">Answer</font>
+      </input>
+      <br>
+      <input name="question2" type="radio" value="reallybig" disabled>Really big</input>
+      <br>
+      <input name="question2" type="radio" value="infinity" disabled>Infinity</input>
+      <br>
+      <input name="question2" type="radio" value="elephant" checked><span style="color:green; font-weight:bold">An elephant</span></input>
+
+      <h2>What follows December 2nd?</h2>
+      <input name="question3" type="radio" value="december3rd" disabled>December 3rd</input>
+      <br>
+      <input name="question3" type="radio" value="no" disabled>No</input>
+      <br>
+      <input name="question3" type="radio" value="n" checked><span style="color:green; font-weight:bold">n</span></input>
+      <br>
+      <input name="question3" type="radio" value="142dwarves" disabled>142 dwarves</input>
+
+    </form>
+
+    <br>
+    Thanks for your feedback!
+    <br>
+    To test your skills further, play the game here:
+    <a href="http://www.addictinggames.com/puzzle-games/theimpossiblequiz.jsp" id="link">
+      Click Here To PLAY!</a>
+
+  </div>
+</body>
+
+</html>

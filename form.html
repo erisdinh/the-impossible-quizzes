@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Preview</title>
+  <link rel="stylesheet" type="text/css" href="advanced.css">
+
+  <script>
+    function validateRadio(radios) {
+      for (i = 0; i < radios.length; ++i) {
+        if (radios[i].checked) return true;
+      }
+      return false;
+    }
+
+    function validateForm() {
+      if (validateRadio(document.forms["form"]["question1"]) && validateRadio(document.forms["form"]["question2"]) && validateRadio(document.forms["form"]["question3"])) {
+        return true;
+      } else {
+        alert('Please answer all questions');
+        return false;
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <img src="Logo.png" style="width:100%; display: block; margin:auto" alt="Logo Image">
+
+    <div class="nav">
+      <table>
+        <tr>
+          <td id="nav"><a href="introduction.html">Introduction</a></td>
+          <td id="nav"><a href="instruction.html">Instructions</a></td>
+          <td id="nav"><a href="form.html">Preview</a></td>
+          <td id="nav"><a href="about.html">About</a></td>
+        </tr>
+      </table>
+    </div>
+    <form name="form" onsubmit="return validateForm()" action="result.html" method="get">
+      <h2>Can a match box?</h2>
+      <input name="question1" type="radio" value="yes">Yes</input>
+      <br>
+      <input name="question1" type="radio" value="no">No</input>
+      <br>
+      <input name="question1" type="radio" value="atincan">No, But a tin can.</input>
+      <br>
+      <input name="question1" type="radio" value="onebeatmiketyson"> Yes, one beat Mike Tyson
+      </input>
+
+      <h2>The answer is really big</h2>
+      <input name="question2" type="radio" value="answer">
+      <font size="50">Answer</font>
+      </input>
+      <br>
+      <input name="question2" type="radio" value="reallybig">Really big</input>
+      <br>
+      <input name="question2" type="radio" value="infinity">Infinity</input>
+      <br>
+      <input name="question2" type="radio" value="elephant">An elephant</input>
+
+      <h2>What follows December 2nd?</h2>
+      <input name="question3" type="radio" value="december3rd">December 3rd</input>
+      <br>
+      <input name="question3" type="radio" value="no">No</input>
+      <br>
+      <input name="question3" type="radio" value="n">n</input>
+      <br>
+      <input name="question3" type="radio" value="142dwarves">142 dwarves</input>
+
+      <h2>Enter your name:</h2>
+      <input name="username" type="text" placeholder="Enter your name here"></input>
+      <h2>Tell us about your experience:</h2>
+      <textarea rows="5" cols="50" placeholder="Tell us about your experience here"></textarea>
+
+      <br>
+      <br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

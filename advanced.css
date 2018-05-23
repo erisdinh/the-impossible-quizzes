@@ -1,0 +1,58 @@
+body {
+  background-color: #ddd;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: orange;
+}
+
+#link {
+  background-color: dodgerblue;
+  font-size: 150%;
+}
+
+#link:hover {
+  background-color: yellow;
+}
+
+
+p {
+  padding: 5px;
+}
+
+.content {
+  font-family: "comic sans", cursive;
+  margin: auto;
+  width: 900px;
+  height: 700px;
+  background-color: #fff;
+  font-size: 120%;
+  /* overflow: scroll; */
+  overflow-y: scroll;
+  box-shadow: 5px 5px 5px #555;
+
+}
+
+ input[type="radio"] {
+  color: ForestGreen;
+}
+
+table {
+  display: block;
+  margin: auto;
+  width:100%;
+}
+
+#nav {
+  width: 225px;
+  margin: auto;
+  text-align: center;
+  background-color: black;
+}
+
+#nav:hover {
+  background-color: dodgerblue;
+}
